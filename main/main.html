@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4906549fb6.js" crossorigin="anonymous"></script>
+    <title>Decide Wheel</title>
+</head>
+<body onload="document.getElementById('height').style.marginBottom = document.getElementById('footer').offsetHeight + 50 + 'px';">
+    <div class="body">
+        <div class="header">
+            <div class="headerleft">
+                <button onclick="location.href=window.location.href" class="homebutton"><i class="fa-solid fa-house fa-2x"></i> <b class="hometext">Decide Wheel</b></button>
+            </div>
+            <div class="headerright">
+                <div class="contactdiv">
+                    <button><b class="contact">Contact</b></button>
+                </div>
+                <div>
+                    <button><b class="about">About</b></button>
+                </div>
+            </div>
+        </div>
+        <div id="height" class="content-body">
+            <div class="head-content">
+                <div class="head-content-objects">
+                    <div class="image">
+                        <img src="image/mehmet.jpg">
+                    </div>
+                    <div class="comment">
+                        <b>
+                            A stylish wheel spinner with various functions & customization. Just enter inputs, spin the wheel and get your random result.
+                            In some situations, our brain just can't make a decision, so why not let the wheel spinner making the small decision.
+                            By just inserting your inputs and spinning wheel, you will immediately get a random result.
+                            The wheel spinner will give you the fairest result by using the advanced algorithm behind it.
+                            People often use the tool for raffles, teachings, remote events, and many other places.
+                            Sections below explain the deep-dive of the Picker Wheel features.
+                        </b>
+                    </div>
+                </div>
+                <div class="button-create-inputs">
+                    <button class="addbutton" onclick="CreateInput()">Add</button>
+                    <button class="removebutton" onclick="RemoveInput()">Remove</button>
+                    <button class="clearbutton" onclick="XInput()">X</button>
+                </div>
+            </div>
+            <div class="inputs-content" id="in1">
+                <div id="jsdiv1" style="display:flex; flex-direction:column; margin:1em; border:2px solid LightGray; border-radius:10px; padding:1em; width:17%; min-width:9em; background-color: whitesmoke;">
+                    <b style="margin-bottom:1em;">Value 1:</b>
+                    <input id="btnid1" maxlength="16" placeholder="Empty" style="overflow-x: auto; width:80%; border:1px solid black; border-radius:7px; height:1.5em; padding-left:1em;">
+                </div>
+                <div id="jsdiv2" style="display:flex; flex-direction:column; margin:1em; border:2px solid LightGray; border-radius:10px; padding:1em; width:17%; min-width:9em; background-color: whitesmoke;">
+                    <b style="margin-bottom:1em;">Value 2:</b>
+                    <input id="btnid2" maxlength="16" placeholder="Empty" style="overflow-x: auto; width:80%; border:1px solid black; border-radius:7px; height:1.5em; padding-left:1em;">
+                </div>
+                <div id="jsdiv3" style="display:flex; flex-direction:column; margin:1em; border:2px solid LightGray; border-radius:10px; padding:1em; width:17%; min-width:9em; background-color: whitesmoke;">
+                    <b style="margin-bottom:1em;">Value 3:</b>
+                    <input id="btnid3" maxlength="16" placeholder="Empty" style="overflow-x: auto; width:80%; border:1px solid black; border-radius:7px; height:1.5em; padding-left:1em;">
+                </div>
+            </div>
+            <div class="wheel-content">
+                <button class="spin-create-btn" id="spin-update-btn">Update Chart</button>
+                <div class="wrapper" id="wrapper">
+                    <div class="container">
+                        <canvas id="wheel"></canvas>
+                        <button id="spin-btn">Spin</button>
+                        <img class="wheelimg" src="image/spinner-arrow-.svg" alt="spinner-arrow" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer" id="footer">
+            <div class="footer-content">
+                <!--content-->
+                <div class="footer-table">
+                     <!--privacy-->
+                    <table>
+                        <tr>
+                            <td><button class="footer-button">Privacy Notice</button></td>
+                            <td><button class="footer-button">User Agreement</button></td>
+                            <td><button class="footer-button">Terms Of Use</button></td>
+                            <td><button class="footer-button">Use Of Cookies</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <p>© 2013 - 2023 Oyuasx. All Rights Reserved</p>
+                </div>
+            </div>
+            <div class="media">
+                <!--sosyal medya-->
+                <div>
+                    <button class="footer-button" onclick="window.location.href='https://www.twitter.com/'"><i class="fa-brands fa-square-twitter fa-2x"></i></button>
+                    <button class="footer-button" onclick="window.location.href='https://www.facebook.com/'"><i class="fa-brands fa-square-facebook fa-2x"></i></button>
+                </div>
+                <div>
+                    <button class="footer-button" onclick="window.location.href='https://www.instagram.com/'"><i class="fa-brands fa-square-instagram fa-2x"></i></button>
+                    <button class="footer-button" onclick="window.location.href='https://www.youtube.com/'"><i class="fa-brands fa-square-youtube fa-2x"></i></button>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
